@@ -6,8 +6,8 @@ authors = ["wizenheimer","pradhyumna85"]
 license = "MIT"
 readme = "README.md"
 packages = [{ include = "pyNedrox", from = "py_Nedrox" }]
-repository = "https://github.com/getomni-ai/Nedrox.git"
-documentation = "https://github.com/getomni-ai/Nedrox"
+repository = "https://github.com/getned/Nedrox.git"
+documentation = "https://github.com/getned/Nedrox"
 keywords = ["ocr", "document", "llm"]
 package-mode = false
 

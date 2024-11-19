@@ -37,7 +37,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/getomni-ai/Nedrox.git"
+    "url": "git+https://github.com/getned/Nedrox.git"
   },
   "keywords": [
     "ocr",
@@ -46,7 +46,7 @@
   ],
   "types": "node-Nedrox/dist/index.d.ts",
   "bugs": {
-    "url": "https://github.com/getomni-ai/Nedrox/issues"
+    "url": "https://github.com/getned/Nedrox/issues"
   },
-  "homepage": "https://github.com/getomni-ai/Nedrox#readme"
+  "homepage": "https://github.com/getned/Nedrox#readme"
 }
