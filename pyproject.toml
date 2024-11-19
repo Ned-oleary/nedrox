@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "py-zerox"
+name = "py-Nedrox"
 version = "0.0.7"
 description = "ocr documents using vision models from all popular providers like OpenAI, Azure OpenAI, Anthropic, AWS Bedrock etc"
 authors = ["wizenheimer","pradhyumna85"]
 license = "MIT"
 readme = "README.md"
-packages = [{ include = "pyzerox", from = "py_zerox" }]
-repository = "https://github.com/getomni-ai/zerox.git"
-documentation = "https://github.com/getomni-ai/zerox"
+packages = [{ include = "pyNedrox", from = "py_Nedrox" }]
+repository = "https://github.com/getomni-ai/Nedrox.git"
+documentation = "https://github.com/getomni-ai/Nedrox"
 keywords = ["ocr", "document", "llm"]
 package-mode = false
 
@@ -22,7 +22,7 @@ aioshutil = "^1.5"
 pypdf2 = "^3.0.1"
 
 [tool.poetry.scripts]
-pre-install = "py_zerox.scripts.pre_install:check_and_install"
+pre-install = "py_Nedrox.scripts.pre_install:check_and_install"
 
 [tool.poetry.group.dev.dependencies]
 notebook = "^7.2.1"

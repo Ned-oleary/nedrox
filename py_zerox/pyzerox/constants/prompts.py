@@ -1,5 +1,5 @@
 class Prompts:
-    """Class for storing prompts for the Zerox system."""
+    """Class for storing prompts for the Nedrox system."""
 
     DEFAULT_SYSTEM_PROMPT = """
     Convert the following PDF page to markdown.

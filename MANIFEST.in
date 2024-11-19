@@ -1,5 +1,5 @@
 include setup.py
 include README.md
 include LICENSE
-recursive-include py_zerox/zerox *
-recursive-include py_zerox/scripts *
+recursive-include py_Nedrox/Nedrox *
+recursive-include py_Nedrox/scripts *

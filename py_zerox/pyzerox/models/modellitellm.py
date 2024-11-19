@@ -49,7 +49,7 @@ class litellmmodel(BaseModel):
         Sets/overrides the system prompt for the model.
         Will raise a friendly warning to notify the user. 
         '''
-        warnings.warn(f"{Messages.CUSTOM_SYSTEM_PROMPT_WARNING}. Default prompt for zerox is:\n {DEFAULT_SYSTEM_PROMPT}")
+        warnings.warn(f"{Messages.CUSTOM_SYSTEM_PROMPT_WARNING}. Default prompt for Nedrox is:\n {DEFAULT_SYSTEM_PROMPT}")
         self._system_prompt = prompt
 
     ## custom method on top of BaseModel

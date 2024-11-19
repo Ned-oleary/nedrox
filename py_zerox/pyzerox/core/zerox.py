@@ -19,10 +19,10 @@ from ..processor import (
 from ..errors import FileUnavailable
 from ..constants.messages import Messages
 from ..models import litellmmodel
-from .types import Page, ZeroxOutput
+from .types import Page, NedroxOutput
 
 
-async def zerox(
+async def Nedrox(
     cleanup: bool = True,
     concurrency: int = 10,
     file_path: Optional[str] = "",
@@ -33,7 +33,7 @@ async def zerox(
     custom_system_prompt: Optional[str] = None,
     select_pages: Optional[Union[int, Iterable[int]]] = None,
     **kwargs
-) -> ZeroxOutput:
+) -> NedroxOutput:
     """
     API to perform OCR to markdown using Vision models.
     Please setup the environment variables for the model and model provider before using this API. Refer: https://docs.litellm.ai/docs/providers
@@ -50,9 +50,9 @@ async def zerox(
     :type model: str, optional
     :param output_dir: The directory to save the markdown output, defaults to None
     :type output_dir: str, optional
-    :param temp_dir: The directory to store temporary files, defaults to some named folder in system's temp directory. If already exists, the contents will be deleted for zerox uses it.
+    :param temp_dir: The directory to store temporary files, defaults to some named folder in system's temp directory. If already exists, the contents will be deleted for Nedrox uses it.
     :type temp_dir: str, optional
-    :param custom_system_prompt: The system prompt to use for the model, this overrides the default system prompt of zerox. Generally it is not required unless you want some specific behaviour. When set, it will raise a friendly warning, defaults to None
+    :param custom_system_prompt: The system prompt to use for the model, this overrides the default system prompt of Nedrox. Generally it is not required unless you want some specific behaviour. When set, it will raise a friendly warning, defaults to None
     :type custom_system_prompt: str, optional
     :param select_pages: Pages to process, can be a single page number or an iterable of page numbers, defaults to None
     :type select_pages: int or Iterable[int], optional
@@ -190,7 +190,7 @@ async def zerox(
                         for i, content in enumerate(aggregated_markdown)
                     ]
 
-        return ZeroxOutput(
+        return NedroxOutput(
             completion_time=completion_time,
             file_name=file_name,
             input_tokens=input_token_count,

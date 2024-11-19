@@ -1,10 +1,10 @@
-# Define the package directory for zerox
-PACKAGE_DIR := py_zerox
+# Define the package directory for Nedrox
+PACKAGE_DIR := py_Nedrox
 
 # Define directory configs
 VENV_DIR := .venv
 DIST_DIR := ${PACKAGE_DIR}/dist
-SRC_DIR := $(PACKAGE_DIR)/zerox
+SRC_DIR := $(PACKAGE_DIR)/Nedrox
 TEST_DIR := $(PACKAGE_DIR)/tests
 
 # Define the build configs

@@ -1,13 +1,13 @@
 {
-  "name": "zerox",
+  "name": "Nedrox",
   "version": "1.0.34",
   "description": "ocr documents using gpt-4o-mini",
-  "main": "node-zerox/dist/index.js",
+  "main": "node-Nedrox/dist/index.js",
   "scripts": {
-    "build": "tsc -p node-zerox/tsconfig.json",
-    "postinstall": "node node-zerox/scripts/install-dependencies.js",
+    "build": "tsc -p node-Nedrox/tsconfig.json",
+    "postinstall": "node node-Nedrox/scripts/install-dependencies.js",
     "prepublishOnly": "npm run build",
-    "test": "ts-node node-zerox/tests/index.ts"
+    "test": "ts-node node-Nedrox/tests/index.ts"
   },
   "author": "tylermaran",
   "license": "MIT",
@@ -37,16 +37,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/getomni-ai/zerox.git"
+    "url": "git+https://github.com/getomni-ai/Nedrox.git"
   },
   "keywords": [
     "ocr",
     "document",
     "llm"
   ],
-  "types": "node-zerox/dist/index.d.ts",
+  "types": "node-Nedrox/dist/index.d.ts",
   "bugs": {
-    "url": "https://github.com/getomni-ai/zerox/issues"
+    "url": "https://github.com/getomni-ai/Nedrox/issues"
   },
-  "homepage": "https://github.com/getomni-ai/zerox#readme"
+  "homepage": "https://github.com/getomni-ai/Nedrox#readme"
 }

@@ -1,6 +1,6 @@
 import { compareKeywords } from "./utils";
 import { ModelOptions } from "../src/types";
-import { zerox } from "../src";
+import { Nedrox } from "../src";
 import dotenv from "dotenv";
 import fs from "node:fs";
 import path from "node:path";
@@ -44,7 +44,7 @@ async function main() {
         }
 
         // Run OCR on the file
-        const ocrResult = await zerox({
+        const ocrResult = await Nedrox({
           cleanup: false,
           filePath,
           maintainFormat: false,

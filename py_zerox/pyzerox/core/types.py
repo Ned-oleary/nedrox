@@ -3,9 +3,9 @@ from dataclasses import dataclass, field
 
 
 @dataclass
-class ZeroxArgs:
+class NedroxArgs:
     """
-    Dataclass to store the arguments for the Zerox class.
+    Dataclass to store the arguments for the Nedrox class.
     """
 
     file_path: str
@@ -31,9 +31,9 @@ class Page:
 
 
 @dataclass
-class ZeroxOutput:
+class NedroxOutput:
     """
-    Dataclass to store the output of the Zerox class.
+    Dataclass to store the output of the Nedrox class.
     """
 
     completion_time: float

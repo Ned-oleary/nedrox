@@ -6,14 +6,14 @@ import {
   isString,
 } from "./utils";
 import { getCompletion } from "./openAI";
-import { ModelOptions, ZeroxArgs, ZeroxOutput } from "./types";
+import { ModelOptions, NedroxArgs, NedroxOutput } from "./types";
 import { validateLLMParams } from "./utils";
 import fs from "fs-extra";
 import os from "os";
 import path from "path";
 import pLimit, { Limit } from "p-limit";
 
-export const zerox = async ({
+export const Nedrox = async ({
   cleanup = true,
   concurrency = 10,
   correctOrientation = true,
@@ -28,7 +28,7 @@ export const zerox = async ({
   pagesToConvertAsImages = -1,
   tempDir = os.tmpdir(),
   trimEdges = true,
-}: ZeroxArgs): Promise<ZeroxOutput> => {
+}: NedroxArgs): Promise<NedroxOutput> => {
   let inputTokenCount = 0;
   let outputTokenCount = 0;
   let priorPage = "";
@@ -47,7 +47,7 @@ export const zerox = async ({
 
   // Ensure temp directory exists + create temp folder
   const rand = Math.floor(1000 + Math.random() * 9000).toString();
-  const tempDirectory = path.join(tempDir || os.tmpdir(), `zerox-temp-${rand}`);
+  const tempDirectory = path.join(tempDir || os.tmpdir(), `Nedrox-temp-${rand}`);
   await fs.ensureDir(tempDirectory);
 
   // Download the PDF. Get file name.

@@ -8,7 +8,7 @@ class InstallSystemDependencies(install):
     def run(self):
         try:
             subprocess.check_call(
-                [sys.executable, "-m", "py_zerox.scripts.pre_install"])
+                [sys.executable, "-m", "py_Nedrox.scripts.pre_install"])
         except subprocess.CalledProcessError as e:
             print(f"Pre-install script failed: {e}", file=sys.stderr)
             sys.exit(1)
@@ -16,12 +16,12 @@ class InstallSystemDependencies(install):
 
 
 setup(
-    name="py-zerox",
+    name="py-Nedrox",
     cmdclass={
         "install": InstallSystemDependencies,
     },
     version="0.0.7",
-    packages=find_packages(where="py_zerox"),  # Specify the root folder
-    package_dir={"": "py_zerox"},  # Map root directory
+    packages=find_packages(where="py_Nedrox"),  # Specify the root folder
+    package_dir={"": "py_Nedrox"},  # Map root directory
     include_package_data=True,
 )

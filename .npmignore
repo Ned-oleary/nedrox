@@ -1,7 +1,7 @@
 # Folders
-node-zerox/src/
-node-zerox/tests/
-py_zerox/
+node-Nedrox/src/
+node-Nedrox/tests/
+py_Nedrox/
 examples/
 shared/
 
@@ -22,4 +22,4 @@ eng.traineddata
 
 # Keep type declarations
 !.gitignore
-!node-zerox/dist/**/*.d.ts
+!node-Nedrox/dist/**/*.d.ts

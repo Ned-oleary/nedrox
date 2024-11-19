@@ -1,6 +1,6 @@
 ![Hero Image](./examples/heroImage.png)
 
-## Zerox OCR
+## Nedrox OCR
 
 <a href="https://discord.gg/smg2QfwtJ6">
   <img src="https://github.com/user-attachments/assets/cccc0e9a-e3b2-425e-9b54-e5024681b129" alt="Join us on Discord" width="200px">
@@ -19,18 +19,18 @@ Try out the hosted version here: https://getomni.ai/ocr-demo
 
 ## Getting Started
 
-Zerox is available as both a Node and Python package.
+Nedrox is available as both a Node and Python package.
 
-- [Node Readme](#node-zerox) - [npm package](https://www.npmjs.com/package/zerox)
-- [Python Readme](#python-zerox) - [pip package](https://pypi.org/project/py-zerox/)
+- [Node Readme](#node-Nedrox) - [npm package](https://www.npmjs.com/package/Nedrox)
+- [Python Readme](#python-Nedrox) - [pip package](https://pypi.org/project/py-Nedrox/)
 
-## Node Zerox
+## Node Nedrox
 
 ```sh
-npm install zerox
+npm install Nedrox
 ```
 
-Zerox uses `graphicsmagick` and `ghostscript` for the pdf => image processing step. These should be pulled automatically, but you may need to manually install.
+Nedrox uses `graphicsmagick` and `ghostscript` for the pdf => image processing step. These should be pulled automatically, but you may need to manually install.
 
 On linux use:
 
@@ -44,9 +44,9 @@ sudo apt-get install -y graphicsmagick
 **With file URL**
 
 ```ts
-import { zerox } from "zerox";
+import { Nedrox } from "Nedrox";
 
-const result = await zerox({
+const result = await Nedrox({
   filePath: "https://omni-demo-data.s3.amazonaws.com/test/cs101.pdf",
   openaiAPIKey: process.env.OPENAI_API_KEY,
 });
@@ -56,9 +56,9 @@ const result = await zerox({
 
 ```ts
 import path from "path";
-import { zerox } from "zerox";
+import { Nedrox } from "Nedrox";
 
-const result = await zerox({
+const result = await Nedrox({
   filePath: path.resolve(__dirname, "./cs101.pdf"),
   openaiAPIKey: process.env.OPENAI_API_KEY,
 });
@@ -67,7 +67,7 @@ const result = await zerox({
 ### Options
 
 ```ts
-const result = await zerox({
+const result = await Nedrox({
   // Required
   filePath: "path/to/file",
   openaiAPIKey: process.env.OPENAI_API_KEY,
@@ -137,27 +137,27 @@ Request #3 => page_2_markdown + page_3_image
 }
 ```
 
-## Python Zerox
+## Python Nedrox
 
 (Python SDK - supports vision models from different providers like OpenAI, Azure OpenAI, Anthropic, AWS Bedrock etc)
 
 ### Installation:
 
 - Install **poppler-utils** on the system, it should be available in path variable
-- Install py-zerox:
+- Install py-Nedrox:
 
 ```sh
-pip install py-zerox
+pip install py-Nedrox
 ```
 
-The `pyzerox.zerox` function is an asynchronous API that performs OCR (Optical Character Recognition) to markdown using vision models. It processes PDF files and converts them into markdown format. Make sure to set up the environment variables for the model and the model provider before using this API.
+The `pyNedrox.Nedrox` function is an asynchronous API that performs OCR (Optical Character Recognition) to markdown using vision models. It processes PDF files and converts them into markdown format. Make sure to set up the environment variables for the model and the model provider before using this API.
 
 Refer to the [LiteLLM Documentation](https://docs.litellm.ai/docs/providers) for setting up the environment and passing the correct model name.
 
 ### Usage
 
 ```python
-from pyzerox import zerox
+from pyNedrox import Nedrox
 import os
 import json
 import asyncio
@@ -224,7 +224,7 @@ async def main():
     select_pages = None ## None for all, but could be int or list(int) page numbers (1 indexed)
 
     output_dir = "./output_test" ## directory to save the consolidated markdown file
-    result = await zerox(file_path=file_path, model=model, output_dir=output_dir,
+    result = await Nedrox(file_path=file_path, model=model, output_dir=output_dir,
                         custom_system_prompt=custom_system_prompt,select_pages=select_pages, **kwargs)
     return result
 
@@ -239,7 +239,7 @@ print(result)
 ### Parameters
 
 ```python
-async def zerox(
+async def Nedrox(
     cleanup: bool = True,
     concurrency: int = 10,
     file_path: Optional[str] = "",
@@ -250,7 +250,7 @@ async def zerox(
     custom_system_prompt: Optional[str] = None,
     select_pages: Optional[Union[int, Iterable[int]]] = None,
     **kwargs
-) -> ZeroxOutput:
+) -> NedroxOutput:
   ...
 ```
 
@@ -270,9 +270,9 @@ Parameters
 - **output_dir** (Optional[str], optional):
   The directory to save the markdown output. Defaults to None.
 - **temp_dir** (str, optional):
-  The directory to store temporary files, defaults to some named folder in system's temp directory. If already exists, the contents will be deleted before zerox uses it.
+  The directory to store temporary files, defaults to some named folder in system's temp directory. If already exists, the contents will be deleted before Nedrox uses it.
 - **custom_system_prompt** (str, optional):
-  The system prompt to use for the model, this overrides the default system prompt of zerox.Generally it is not required unless you want some specific behaviour. When set, it will raise a friendly warning. Defaults to None.
+  The system prompt to use for the model, this overrides the default system prompt of Nedrox.Generally it is not required unless you want some specific behaviour. When set, it will raise a friendly warning. Defaults to None.
 - **select_pages** (Optional[Union[int, Iterable[int]]], optional):
   Pages to process, can be a single page number or an iterable of page numbers, Defaults to None
 - **kwargs** (dict, optional):
@@ -281,7 +281,7 @@ Parameters
 
 Returns
 
-- ZeroxOutput:
+- NedroxOutput:
   Contains the markdown content generated by the model and also some metadata (refer below).
 
 ### Example Output (Output from "azure/gpt-4o-mini"):
@@ -289,7 +289,7 @@ Returns
 `Note: The output is mannually wrapped for this documentation for better readability.`
 
 ````Python
-ZeroxOutput(
+NedroxOutput(
     completion_time=9432.975,
     file_name='cs101',
     input_tokens=36877,

@@ -1,4 +1,4 @@
-export interface ZeroxArgs {
+export interface NedroxArgs {
   cleanup?: boolean;
   concurrency?: number;
   correctOrientation?: boolean;
@@ -32,7 +32,7 @@ export interface Page {
   page: number;
 }
 
-export interface ZeroxOutput {
+export interface NedroxOutput {
   completionTime: number;
   fileName: string;
   inputTokens: number;

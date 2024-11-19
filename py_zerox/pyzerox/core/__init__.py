@@ -1,5 +1,5 @@
-from .zerox import zerox
+from .Nedrox import Nedrox
 
 __all__ = [
-    "zerox",
+    "Nedrox",
 ]

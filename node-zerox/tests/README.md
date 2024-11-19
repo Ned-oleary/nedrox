@@ -1,11 +1,11 @@
 # Test Script README
 
-This script runs a quick test of the zerox output against a set keywords from known documents. This is not an exhaustive test, as it will not cover layout, but gives a good sense of any regressions.
+This script runs a quick test of the Nedrox output against a set keywords from known documents. This is not an exhaustive test, as it will not cover layout, but gives a good sense of any regressions.
 
 ## Overview
 
 - **Processes Files**: Reads documents from `shared/inputs` (mix of PDFs, images, Word docs, etc.).
-- **Runs OCR**: Runs `zerox` live against all the files.
+- **Runs OCR**: Runs `Nedrox` live against all the files.
 - **Keyword Verification**: Compares extracted text with expected keywords from `shared/test.json`.
 - **Results**: Outputs counts of keywords found and missing, and displays a summary table.
 
@@ -13,7 +13,7 @@ This script runs a quick test of the zerox output against a set keywords from kn
 
 You should be able to run this test with `npm run test` from the root directory.
 
-Note you will need a `.env` file in `node-zerox` with your OpenAI API key:
+Note you will need a `.env` file in `node-Nedrox` with your OpenAI API key:
 
 ```
 OPENAI_API_KEY=your_api_key_here
