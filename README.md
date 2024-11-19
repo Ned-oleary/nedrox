@@ -2,9 +2,6 @@
 
 ## Nedrox OCR
 
-<a href="https://discord.gg/smg2QfwtJ6">
-  <img src="https://github.com/user-attachments/assets/cccc0e9a-e3b2-425e-9b54-e5024681b129" alt="Join us on Discord" width="200px">
-</a>
 
 A dead simple way of OCR-ing a document for AI ingestion. Documents are meant to be a visual representation after all. With weird layouts, tables, charts, etc. The vision models just make sense!
 
@@ -15,7 +12,6 @@ The general logic:
 - Pass each image to GPT and ask nicely for Markdown
 - Aggregate the responses and return Markdown
 
-Try out the hosted version here: https://getomni.ai/ocr-demo
 
 ## Getting Started
 
